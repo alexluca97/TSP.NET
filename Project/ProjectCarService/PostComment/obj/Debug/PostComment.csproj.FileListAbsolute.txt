@@ -1,0 +1,11 @@
+D:\Faculty\DotNETNextLevel\Project2\ProjectCarService\PostComment\bin\Debug\PostComment.dll.config
+D:\Faculty\DotNETNextLevel\Project2\ProjectCarService\PostComment\bin\Debug\PostComment.dll
+D:\Faculty\DotNETNextLevel\Project2\ProjectCarService\PostComment\bin\Debug\PostComment.pdb
+D:\Faculty\DotNETNextLevel\Project2\ProjectCarService\PostComment\bin\Debug\EntityFramework.dll
+D:\Faculty\DotNETNextLevel\Project2\ProjectCarService\PostComment\bin\Debug\EntityFramework.SqlServer.dll
+D:\Faculty\DotNETNextLevel\Project2\ProjectCarService\PostComment\bin\Debug\EntityFramework.xml
+D:\Faculty\DotNETNextLevel\Project2\ProjectCarService\PostComment\bin\Debug\EntityFramework.SqlServer.xml
+D:\Faculty\DotNETNextLevel\Project2\ProjectCarService\PostComment\obj\Debug\PostComment.csproj.CoreCompileInputs.cache
+D:\Faculty\DotNETNextLevel\Project2\ProjectCarService\PostComment\obj\Debug\PostComment.csproj.CopyComplete
+D:\Faculty\DotNETNextLevel\Project2\ProjectCarService\PostComment\obj\Debug\PostComment.dll
+D:\Faculty\DotNETNextLevel\Project2\ProjectCarService\PostComment\obj\Debug\PostComment.pdb

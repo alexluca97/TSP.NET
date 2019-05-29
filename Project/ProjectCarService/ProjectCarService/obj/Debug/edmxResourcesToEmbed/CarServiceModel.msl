@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CarServiceModelStoreContainer" CdmEntityContainer="CarServiceModelContainer">
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="IsTypeOf(CarServiceModel.Client)">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="Nume" ColumnName="Nume" />
+          <ScalarProperty Name="Prenume" ColumnName="Prenume" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Localitate" ColumnName="Localitate" />
+          <ScalarProperty Name="Judet" ColumnName="Judet" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Autos">
+      <EntityTypeMapping TypeName="IsTypeOf(CarServiceModel.Auto)">
+        <MappingFragment StoreEntitySet="Autos">
+          <ScalarProperty Name="AutoId" ColumnName="AutoId" />
+          <ScalarProperty Name="NumarAuto" ColumnName="NumarAuto" />
+          <ScalarProperty Name="SerieSasiu" ColumnName="SerieSasiu" />
+          <ScalarProperty Name="ClientClientId" ColumnName="ClientClientId" />
+          <ScalarProperty Name="SasiuSasiuId" ColumnName="SasiuSasiuId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sasius">
+      <EntityTypeMapping TypeName="IsTypeOf(CarServiceModel.Sasiu)">
+        <MappingFragment StoreEntitySet="Sasius">
+          <ScalarProperty Name="SasiuId" ColumnName="SasiuId" />
+          <ScalarProperty Name="CodSasiu" ColumnName="CodSasiu" />
+          <ScalarProperty Name="Denumire" ColumnName="Denumire" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mecanics">
+      <EntityTypeMapping TypeName="IsTypeOf(CarServiceModel.Mecanic)">
+        <MappingFragment StoreEntitySet="Mecanics">
+          <ScalarProperty Name="MecanicId" ColumnName="MecanicId" />
+          <ScalarProperty Name="Nume" ColumnName="Nume" />
+          <ScalarProperty Name="Prenume" ColumnName="Prenume" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Materials">
+      <EntityTypeMapping TypeName="IsTypeOf(CarServiceModel.Material)">
+        <MappingFragment StoreEntitySet="Materials">
+          <ScalarProperty Name="MaterialId" ColumnName="MaterialId" />
+          <ScalarProperty Name="Denumire" ColumnName="Denumire" />
+          <ScalarProperty Name="Cantitate" ColumnName="Cantitate" />
+          <ScalarProperty Name="Pret" ColumnName="Pret" />
+          <ScalarProperty Name="DataAprovizionare" ColumnName="DataAprovizionare" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Imagines">
+      <EntityTypeMapping TypeName="IsTypeOf(CarServiceModel.Imagine)">
+        <MappingFragment StoreEntitySet="Imagines">
+          <ScalarProperty Name="ImagineId" ColumnName="ImagineId" />
+          <ScalarProperty Name="Titlu" ColumnName="Titlu" />
+          <ScalarProperty Name="Descriere" ColumnName="Descriere" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="Foto" ColumnName="Foto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetaliuComandas">
+      <EntityTypeMapping TypeName="IsTypeOf(CarServiceModel.DetaliuComanda)">
+        <MappingFragment StoreEntitySet="DetaliuComandas">
+          <ScalarProperty Name="DetaliuComandaId" ColumnName="DetaliuComandaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Operations">
+      <EntityTypeMapping TypeName="IsTypeOf(CarServiceModel.Operatie)">
+        <MappingFragment StoreEntitySet="Operations">
+          <ScalarProperty Name="OperatieId" ColumnName="OperatieId" />
+          <ScalarProperty Name="Denumire" ColumnName="Denumire" />
+          <ScalarProperty Name="TimpExecutie" ColumnName="TimpExecutie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comands">
+      <EntityTypeMapping TypeName="IsTypeOf(CarServiceModel.Comanda)">
+        <MappingFragment StoreEntitySet="Comands">
+          <ScalarProperty Name="ComandaId" ColumnName="ComandaId" />
+          <ScalarProperty Name="StareComanda" ColumnName="StareComanda" />
+          <ScalarProperty Name="DataSystem" ColumnName="DataSystem" />
+          <ScalarProperty Name="DataProgramare" ColumnName="DataProgramare" />
+          <ScalarProperty Name="DataFinalizare" ColumnName="DataFinalizare" />
+          <ScalarProperty Name="KmBord" ColumnName="KmBord" />
+          <ScalarProperty Name="Descriere" ColumnName="Descriere" />
+          <ScalarProperty Name="ValoarePise" ColumnName="ValoarePise" />
+          <ScalarProperty Name="ClientClientId" ColumnName="ClientClientId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="MaterialDetaliuComanda" TypeName="CarServiceModel.MaterialDetaliuComanda" StoreEntitySet="Materials">
+      <EndProperty Name="DetaliuComanda">
+        <ScalarProperty Name="DetaliuComandaId" ColumnName="DetaliuComanda_DetaliuComandaId" />
+      </EndProperty>
+      <EndProperty Name="Material">
+        <ScalarProperty Name="MaterialId" ColumnName="MaterialId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="OperatieDetaliuComanda" TypeName="CarServiceModel.OperatieDetaliuComanda" StoreEntitySet="Operations">
+      <EndProperty Name="DetaliuComanda">
+        <ScalarProperty Name="DetaliuComandaId" ColumnName="DetaliuComanda_DetaliuComandaId" />
+      </EndProperty>
+      <EndProperty Name="Operatie">
+        <ScalarProperty Name="OperatieId" ColumnName="OperatieId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DetaliuComandaComanda" TypeName="CarServiceModel.DetaliuComandaComanda" StoreEntitySet="DetaliuComandas">
+      <EndProperty Name="Comanda">
+        <ScalarProperty Name="ComandaId" ColumnName="Comanda_ComandaId" />
+      </EndProperty>
+      <EndProperty Name="DetaliuComanda">
+        <ScalarProperty Name="DetaliuComandaId" ColumnName="DetaliuComandaId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DetaliuComandaImagine" TypeName="CarServiceModel.DetaliuComandaImagine" StoreEntitySet="Imagines">
+      <EndProperty Name="DetaliuComanda">
+        <ScalarProperty Name="DetaliuComandaId" ColumnName="DetaliuComanda_DetaliuComandaId" />
+      </EndProperty>
+      <EndProperty Name="Imagine">
+        <ScalarProperty Name="ImagineId" ColumnName="ImagineId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MecanicDetaliuComanda" TypeName="CarServiceModel.MecanicDetaliuComanda" StoreEntitySet="MecanicDetaliuComanda">
+      <EndProperty Name="Mecanic">
+        <ScalarProperty Name="MecanicId" ColumnName="Mecanics_MecanicId" />
+      </EndProperty>
+      <EndProperty Name="DetaliuComanda">
+        <ScalarProperty Name="DetaliuComandaId" ColumnName="DetaliuComandas_DetaliuComandaId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

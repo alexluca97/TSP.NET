@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="46e6e5e00cf94f9eade079df981c3acb" Name="Diagram1" ZoomLevel="74" >
+        <EntityTypeShape EntityType="CarServiceModel.Client" Width="1.5" PointX="1" PointY="0.625" />
+        <EntityTypeShape EntityType="CarServiceModel.Auto" Width="1.5" PointX="2.5" PointY="0.625" />
+        <EntityTypeShape EntityType="CarServiceModel.Sasiu" Width="1.5" PointX="4" PointY="0.625" />
+        <EntityTypeShape EntityType="CarServiceModel.Mecanic" Width="1.5" PointX="5.5" PointY="0.625" />
+        <EntityTypeShape EntityType="CarServiceModel.Material" Width="1.5" PointX="8.125" PointY="0.625" />
+        <EntityTypeShape EntityType="CarServiceModel.Imagine" Width="1.5" PointX="0.75" PointY="5" />
+        <EntityTypeShape EntityType="CarServiceModel.DetaliuComanda" Width="1.5" PointX="2.875" PointY="4.125" />
+        <EntityTypeShape EntityType="CarServiceModel.Operatie" Width="1.5" PointX="5.25" PointY="6" />
+        <EntityTypeShape EntityType="CarServiceModel.Comanda" Width="1.5" PointX="8.375" PointY="4" />
+        <AssociationConnector Association="CarServiceModel.ClientAuto" />
+        <AssociationConnector Association="CarServiceModel.ClientComanda" />
+        <AssociationConnector Association="CarServiceModel.MaterialDetaliuComanda" />
+        <AssociationConnector Association="CarServiceModel.OperatieDetaliuComanda" />
+        <AssociationConnector Association="CarServiceModel.DetaliuComandaComanda" />
+        <AssociationConnector Association="CarServiceModel.SasiuAuto" />
+        <AssociationConnector Association="CarServiceModel.DetaliuComandaImagine" />
+        <AssociationConnector Association="CarServiceModel.MecanicDetaliuComanda" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

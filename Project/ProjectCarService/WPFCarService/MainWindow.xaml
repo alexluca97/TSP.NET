@@ -1,0 +1,46 @@
+﻿<Window x:Class="WPFCarService.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFCarService"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="661.363" Width="813.636">
+    <Grid Margin="0,0,0,1" Name="CustomersGrid">
+        <Button x:Name="SearchClientBtn" Content="Cauta Client" HorizontalAlignment="Left" VerticalAlignment="Top" Width="138" Margin="10,34,0,0" Height="37" FontSize="16" Click="SearchClientBtn_Click"/>
+        <Button x:Name="AddAutoBtn" Content="Adauga Vehicul" HorizontalAlignment="Left" VerticalAlignment="Top" Width="138" Margin="10,285,0,0" Height="37" FontSize="16" Click="AddAutoBtn_Click"/>
+        <Button x:Name="CreateCommandBtn" Content="Creaza Comanda" HorizontalAlignment="Left" VerticalAlignment="Top" Width="138" Margin="10,168,0,0" Height="80" FontSize="16"/>
+        <Button x:Name="AddClientBtn" Content="Adauga Client" HorizontalAlignment="Left" VerticalAlignment="Top" Width="138" Margin="10,76,0,0" Height="37" FontSize="16" Click="AddClientBtn_Click"/>
+        <Button x:Name="SearchMechanicsBtn" Content="Cauta Mecanici" HorizontalAlignment="Left" Margin="10,480,0,0" VerticalAlignment="Top" Width="138" Height="35" FontSize="16"/>
+        <Button x:Name="FinishCommandBtn" Content="Finalizare Comanda" HorizontalAlignment="Left" Margin="10,552,0,0" VerticalAlignment="Top" Width="160" Height="34" FontSize="16"/>
+        <ListView x:Name="ClientLv" HorizontalAlignment="Left" Height="155" Margin="238,34,0,0" VerticalAlignment="Top" Width="521" RenderTransformOrigin="-0.716,0.31">
+            <GridView>
+                <GridViewColumn Header="ClientId" Width="120" DisplayMemberBinding="{Binding ClientId}" />
+                <GridViewColumn Header="Nume" Width="50" DisplayMemberBinding="{Binding Nume}" />
+                <GridViewColumn Header="Prenume" Width="150" DisplayMemberBinding="{Binding Prenume}" />
+                <GridViewColumn Header="Adresa" Width="120" DisplayMemberBinding="{Binding Adresa}" />
+                <GridViewColumn Header="Localitate" Width="50" DisplayMemberBinding="{Binding Localitate}" />
+                <GridViewColumn Header="Telefon" Width="150" DisplayMemberBinding="{Binding Telefon}" />
+                <GridViewColumn Header="Email" Width="150" DisplayMemberBinding="{Binding Email}" />
+            </GridView>
+        </ListView>
+        
+        <Label x:Name="ClientLb" Content="Clients" HorizontalAlignment="Left" Margin="238,0,0,0" VerticalAlignment="Top" Height="34" Width="161" FontSize="18" FontWeight="Bold"/>
+        <ListView x:Name="AutosLv" HorizontalAlignment="Left" Height="124" Margin="238,248,0,0" VerticalAlignment="Top" Width="521">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label x:Name="AutoLb" Content="Auto" HorizontalAlignment="Left" Margin="238,212,0,0" VerticalAlignment="Top" Width="63" FontSize="16" FontWeight="Bold"/>
+        <RichTextBox x:Name="SasiuRtb" HorizontalAlignment="Left" Height="100" Margin="238,480,0,0" VerticalAlignment="Top" Width="521">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Label x:Name="SasiuLb" Content="Sasiu" HorizontalAlignment="Left" Margin="238,432,0,0" VerticalAlignment="Top" Height="28" Width="63" FontSize="16" FontWeight="Bold"/>
+    </Grid>
+</Window>

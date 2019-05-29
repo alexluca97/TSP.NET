@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cc55c73e-d1b4-431f-87f3-3df35da3f820" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/PC" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PC.xsd" MetadataType="Schema" ID="705950b5-a749-455c-9e2f-c141ed2cc46e" SourceId="1" SourceUrl="http://localhost:8000/PC?xsd=xsd3" />
+    <MetadataFile FileName="PC1.xsd" MetadataType="Schema" ID="d6074eb9-7b99-46dd-8e65-a006ce371822" SourceId="1" SourceUrl="http://localhost:8000/PC?xsd=xsd2" />
+    <MetadataFile FileName="PC.disco" MetadataType="Disco" ID="888819f1-e0ee-4909-97c4-49fc6f05d13e" SourceId="1" SourceUrl="http://localhost:8000/PC?disco" />
+    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="f95b751b-c1f1-4d74-8c76-716a309d018d" SourceId="1" SourceUrl="http://localhost:8000/PC?wsdl" />
+    <MetadataFile FileName="PC2.xsd" MetadataType="Schema" ID="0e1146db-85de-4b56-8e34-59bcdd838faf" SourceId="1" SourceUrl="http://localhost:8000/PC?xsd=xsd1" />
+    <MetadataFile FileName="PC3.xsd" MetadataType="Schema" ID="ba297d54-c131-4c70-9cc2-1ef88cc461f2" SourceId="1" SourceUrl="http://localhost:8000/PC?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

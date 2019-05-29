@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8000/PC?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8000/PC?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8000/PC?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ProjectCarService" />
+      <xsd:import schemaLocation="http://localhost:8000/PC?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_AddClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddClient" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddAuto_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAuto" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddAuto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddComanda_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddComanda" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddComanda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddComandaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddDetaliuComanda_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDetaliuComanda" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddDetaliuComanda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDetaliuComandaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddImage" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddMaterial_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMaterial" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddMaterial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddMecanic_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMecanic" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddMecanic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMecanicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddOperatie_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOperatie" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddOperatie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOperatieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddSasiu_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddSasiu" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddSasiu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddSasiuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllAuto_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAuto" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllAuto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAutoByClientId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoByClientId" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAutoByClientId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoByClientIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllClients_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllClients" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllClients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllClientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllComands_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllComands" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllComands_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllComandsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllMaterials_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMaterials" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllMaterials_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMaterialsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllMecanics_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMecanics" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllMecanics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMecanicsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllDetailsCommands_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDetailsCommands" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllDetailsCommands_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllDetailsCommandsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllImagies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllImagies" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllImagies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllImagiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetOperations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperations" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetOperations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllChassis_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllChassis" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAllChassis_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllChassisResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetSasiuByCodeAndName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSasiuByCodeAndName" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetSasiuByCodeAndName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSasiuByCodeAndNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClient" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetSasiu_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSasiu" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetSasiu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSasiuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAuto_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuto" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetAuto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetComanda_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetComanda" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetComanda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetComandaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetDetaliuComanda_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetaliuComanda" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetDetaliuComanda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetaliuComandaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetImagine_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImagine" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetImagine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImagineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetMaterial_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterial" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetMaterial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetMecanic_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMecanic" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetMecanic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMecanicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetOperatie_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatie" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetOperatie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOperatieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteClientAutoSasiu_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteClientAutoSasiu" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteClientAutoSasiu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteClientAutoSasiuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteClient" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteAuto_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAuto" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteAuto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteComanda_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteComanda" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteComanda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteComandaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteMaterial_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMaterial" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteMaterial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteMecanic_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMecanic" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteMecanic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteMecanicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteOperatie_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOperatie" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteOperatie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOperatieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteSasiu_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSasiu" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteSasiu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSasiuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteDetaliuComanda_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDetaliuComanda" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteDetaliuComanda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDetaliuComandaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteImage" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateClient" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateAuto_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAuto" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateAuto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateComanda_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateComanda" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateComanda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateComandaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateDetaliuComanda_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDetaliuComanda" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateDetaliuComanda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDetaliuComandaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateImaine_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateImaine" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateImaine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateImaineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateMaterial_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMaterial" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateMaterial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateMecanic_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMecanic" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateMecanic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateMecanicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateOperatie_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOperatie" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateOperatie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOperatieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateSasiu_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSasiu" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateSasiu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSasiuResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="AddClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddClient" message="tns:IService_AddClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddClientResponse" message="tns:IService_AddClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAuto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddAuto" message="tns:IService_AddAuto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddAutoResponse" message="tns:IService_AddAuto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddComanda">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddComanda" message="tns:IService_AddComanda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddComandaResponse" message="tns:IService_AddComanda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDetaliuComanda">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddDetaliuComanda" message="tns:IService_AddDetaliuComanda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddDetaliuComandaResponse" message="tns:IService_AddDetaliuComanda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddImage" message="tns:IService_AddImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddImageResponse" message="tns:IService_AddImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMaterial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddMaterial" message="tns:IService_AddMaterial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddMaterialResponse" message="tns:IService_AddMaterial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMecanic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddMecanic" message="tns:IService_AddMecanic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddMecanicResponse" message="tns:IService_AddMecanic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOperatie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddOperatie" message="tns:IService_AddOperatie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddOperatieResponse" message="tns:IService_AddOperatie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSasiu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddSasiu" message="tns:IService_AddSasiu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddSasiuResponse" message="tns:IService_AddSasiu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAuto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetAllAuto" message="tns:IService_GetAllAuto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetAllAutoResponse" message="tns:IService_GetAllAuto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoByClientId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetAutoByClientId" message="tns:IService_GetAutoByClientId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetAutoByClientIdResponse" message="tns:IService_GetAutoByClientId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllClients">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetAllClients" message="tns:IService_GetAllClients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetAllClientsResponse" message="tns:IService_GetAllClients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllComands">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetAllComands" message="tns:IService_GetAllComands_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetAllComandsResponse" message="tns:IService_GetAllComands_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMaterials">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetAllMaterials" message="tns:IService_GetAllMaterials_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetAllMaterialsResponse" message="tns:IService_GetAllMaterials_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMecanics">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetAllMecanics" message="tns:IService_GetAllMecanics_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetAllMecanicsResponse" message="tns:IService_GetAllMecanics_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDetailsCommands">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetAllDetailsCommands" message="tns:IService_GetAllDetailsCommands_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetAllDetailsCommandsResponse" message="tns:IService_GetAllDetailsCommands_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllImagies">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetAllImagies" message="tns:IService_GetAllImagies_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetAllImagiesResponse" message="tns:IService_GetAllImagies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperations">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetOperations" message="tns:IService_GetOperations_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetOperationsResponse" message="tns:IService_GetOperations_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllChassis">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetAllChassis" message="tns:IService_GetAllChassis_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetAllChassisResponse" message="tns:IService_GetAllChassis_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSasiuByCodeAndName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetSasiuByCodeAndName" message="tns:IService_GetSasiuByCodeAndName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetSasiuByCodeAndNameResponse" message="tns:IService_GetSasiuByCodeAndName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetClient" message="tns:IService_GetClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetClientResponse" message="tns:IService_GetClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSasiu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetSasiu" message="tns:IService_GetSasiu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetSasiuResponse" message="tns:IService_GetSasiu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetAuto" message="tns:IService_GetAuto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetAutoResponse" message="tns:IService_GetAuto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComanda">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetComanda" message="tns:IService_GetComanda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetComandaResponse" message="tns:IService_GetComanda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetaliuComanda">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetDetaliuComanda" message="tns:IService_GetDetaliuComanda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetDetaliuComandaResponse" message="tns:IService_GetDetaliuComanda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImagine">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetImagine" message="tns:IService_GetImagine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetImagineResponse" message="tns:IService_GetImagine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetMaterial" message="tns:IService_GetMaterial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetMaterialResponse" message="tns:IService_GetMaterial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMecanic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetMecanic" message="tns:IService_GetMecanic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetMecanicResponse" message="tns:IService_GetMecanic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetOperatie" message="tns:IService_GetOperatie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetOperatieResponse" message="tns:IService_GetOperatie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClientAutoSasiu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteClientAutoSasiu" message="tns:IService_DeleteClientAutoSasiu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteClientAutoSasiuResponse" message="tns:IService_DeleteClientAutoSasiu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteClient" message="tns:IService_DeleteClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteClientResponse" message="tns:IService_DeleteClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAuto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteAuto" message="tns:IService_DeleteAuto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteAutoResponse" message="tns:IService_DeleteAuto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteComanda">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteComanda" message="tns:IService_DeleteComanda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteComandaResponse" message="tns:IService_DeleteComanda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMaterial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteMaterial" message="tns:IService_DeleteMaterial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteMaterialResponse" message="tns:IService_DeleteMaterial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMecanic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteMecanic" message="tns:IService_DeleteMecanic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteMecanicResponse" message="tns:IService_DeleteMecanic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOperatie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteOperatie" message="tns:IService_DeleteOperatie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteOperatieResponse" message="tns:IService_DeleteOperatie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSasiu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteSasiu" message="tns:IService_DeleteSasiu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteSasiuResponse" message="tns:IService_DeleteSasiu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDetaliuComanda">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteDetaliuComanda" message="tns:IService_DeleteDetaliuComanda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteDetaliuComandaResponse" message="tns:IService_DeleteDetaliuComanda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteImage" message="tns:IService_DeleteImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteImageResponse" message="tns:IService_DeleteImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateClient" message="tns:IService_UpdateClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateClientResponse" message="tns:IService_UpdateClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAuto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateAuto" message="tns:IService_UpdateAuto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateAutoResponse" message="tns:IService_UpdateAuto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateComanda">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateComanda" message="tns:IService_UpdateComanda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateComandaResponse" message="tns:IService_UpdateComanda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDetaliuComanda">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateDetaliuComanda" message="tns:IService_UpdateDetaliuComanda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateDetaliuComandaResponse" message="tns:IService_UpdateDetaliuComanda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateImaine">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateImaine" message="tns:IService_UpdateImaine_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateImaineResponse" message="tns:IService_UpdateImaine_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMaterial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateMaterial" message="tns:IService_UpdateMaterial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateMaterialResponse" message="tns:IService_UpdateMaterial_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMecanic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateMecanic" message="tns:IService_UpdateMecanic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateMecanicResponse" message="tns:IService_UpdateMecanic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOperatie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateOperatie" message="tns:IService_UpdateOperatie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateOperatieResponse" message="tns:IService_UpdateOperatie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSasiu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateSasiu" message="tns:IService_UpdateSasiu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateSasiuResponse" message="tns:IService_UpdateSasiu_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddClient">
+      <soap:operation soapAction="http://tempuri.org/IService/AddClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAuto">
+      <soap:operation soapAction="http://tempuri.org/IService/AddAuto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddComanda">
+      <soap:operation soapAction="http://tempuri.org/IService/AddComanda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDetaliuComanda">
+      <soap:operation soapAction="http://tempuri.org/IService/AddDetaliuComanda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddImage">
+      <soap:operation soapAction="http://tempuri.org/IService/AddImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMaterial">
+      <soap:operation soapAction="http://tempuri.org/IService/AddMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMecanic">
+      <soap:operation soapAction="http://tempuri.org/IService/AddMecanic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOperatie">
+      <soap:operation soapAction="http://tempuri.org/IService/AddOperatie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSasiu">
+      <soap:operation soapAction="http://tempuri.org/IService/AddSasiu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAuto">
+      <soap:operation soapAction="http://tempuri.org/IService/GetAllAuto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAutoByClientId">
+      <soap:operation soapAction="http://tempuri.org/IService/GetAutoByClientId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllClients">
+      <soap:operation soapAction="http://tempuri.org/IService/GetAllClients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllComands">
+      <soap:operation soapAction="http://tempuri.org/IService/GetAllComands" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMaterials">
+      <soap:operation soapAction="http://tempuri.org/IService/GetAllMaterials" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMecanics">
+      <soap:operation soapAction="http://tempuri.org/IService/GetAllMecanics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllDetailsCommands">
+      <soap:operation soapAction="http://tempuri.org/IService/GetAllDetailsCommands" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllImagies">
+      <soap:operation soapAction="http://tempuri.org/IService/GetAllImagies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperations">
+      <soap:operation soapAction="http://tempuri.org/IService/GetOperations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllChassis">
+      <soap:operation soapAction="http://tempuri.org/IService/GetAllChassis" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSasiuByCodeAndName">
+      <soap:operation soapAction="http://tempuri.org/IService/GetSasiuByCodeAndName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClient">
+      <soap:operation soapAction="http://tempuri.org/IService/GetClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSasiu">
+      <soap:operation soapAction="http://tempuri.org/IService/GetSasiu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAuto">
+      <soap:operation soapAction="http://tempuri.org/IService/GetAuto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetComanda">
+      <soap:operation soapAction="http://tempuri.org/IService/GetComanda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetaliuComanda">
+      <soap:operation soapAction="http://tempuri.org/IService/GetDetaliuComanda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImagine">
+      <soap:operation soapAction="http://tempuri.org/IService/GetImagine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaterial">
+      <soap:operation soapAction="http://tempuri.org/IService/GetMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMecanic">
+      <soap:operation soapAction="http://tempuri.org/IService/GetMecanic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOperatie">
+      <soap:operation soapAction="http://tempuri.org/IService/GetOperatie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClientAutoSasiu">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteClientAutoSasiu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClient">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAuto">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteAuto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteComanda">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteComanda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMaterial">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteMecanic">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteMecanic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOperatie">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteOperatie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSasiu">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteSasiu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDetaliuComanda">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteDetaliuComanda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImage">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateClient">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAuto">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateAuto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateComanda">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateComanda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDetaliuComanda">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateDetaliuComanda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateImaine">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateImaine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMaterial">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateMecanic">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateMecanic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOperatie">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateOperatie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSasiu">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateSasiu" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="BasicHttpBinding_IService" binding="tns:BasicHttpBinding_IService">
+      <soap:address location="http://localhost:8000/PC" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,6 @@
+WPF
+Abordare diferita de WF, controale reconstruite GDI+, posibilitati de binding in 3 directii:sursa, destinatie ...,
+			posibilitatea de a construi controale complexe(la wf, se pierdea f. timp pe constructie)
+
+Avantaj=> separarea completa dintre designeri si dezvoltatori.
+"assembly" contine tipurile pe care le dezvoltam, iar din aceia sunt scosi metodele dorite.

@@ -1,0 +1,14 @@
+D:\Faculty\DotNETNextLevel\Laborator1\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Faculty\DotNETNextLevel\Laborator1\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\Faculty\DotNETNextLevel\Laborator1\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\Faculty\DotNETNextLevel\Laborator1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+D:\Faculty\DotNETNextLevel\Laborator1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Faculty\DotNETNextLevel\Laborator1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\Faculty\DotNETNextLevel\Laborator1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\Faculty\DotNETNextLevel\Laborator1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Faculty\DotNETNextLevel\Laborator1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\Faculty\DotNETNextLevel\Laborator1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AddForm.resources
+D:\Faculty\DotNETNextLevel\Laborator1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MainMenuForm.resources
+D:\Faculty\DotNETNextLevel\Laborator1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.DeleteForm.resources
+D:\Faculty\DotNETNextLevel\Laborator1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.CheckForModifyForm.resources
+D:\Faculty\DotNETNextLevel\Laborator1\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ModifyForm.resources
